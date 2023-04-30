@@ -171,5 +171,7 @@ vs_der1 <- vs_der1 %>%
 vs <- left_join(vs_der1, vs_base1, by = c("USUBJID", "VSSEQ", "VSCAT", "VSTESTCD", "VSGRPID", "VSSPID", "VSDT"))
 vs$vsorresu[is.na(vs$VSORRES)] <- ""
 
-vs <- vs[order(vs$usubjid, vs$vsseq), ]
+vs <- vs[order(vs$USUBJID, vs$VSSEQ), ]
 vs <- vs[, !names(vs) %in% "epoch_", drop = FALSE]
+colnames(vs)[colnames(vs) == "RFSTDTC.x"] <- "RFSTDTC"
+
