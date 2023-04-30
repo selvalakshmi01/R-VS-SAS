@@ -1,2 +1,2 @@
 # R-VS-SAS
-A Experiment of generating SDTM dataset in R vs SAS
+Generating SDTM VS(Vital Signs) dataset with R & SAS
